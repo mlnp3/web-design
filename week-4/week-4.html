@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Week 4 Tables and Forms </title>
+</head>
+<body>
+    <section>
+        <h1>Basic Table: </h1>
+        <table>
+                <!-- Add style later -->
+                <!-- style="padding-left: 12px; text-align: left;" -->
+                <tr>
+                  <th > First Name </th>
+                  <th > Last Name </th>
+                  <th > Phone Number </th>
+                  <th > Email </th>
+                  <th > Undergraduate</th>
+                </tr>
+                <tr>
+                    <td >Mohamed</td>
+                    <td >Langi</td>
+                    <td >314-494-6958</td>
+                    <td >mlnp3@mail.umsl.edu</td>
+                    <td  >Yes</td>
+                </tr>
+            </table>
+
+    </section>
+<hr>
+    <section>
+        <h2>Table with Style: </h2>
+    <table style="border: 1px solid black; border-collapse: collapse;">
+        <!-- Add style later -->
+        <!-- style="padding-left: 12px; text-align: left;" -->
+        <tr>
+          <th style="padding-left: 12px; text-align: left;border: 1px solid black;"> First Name </th>
+          <th style="padding-left: 12px;text-align: left;border: 1px solid black;"> Last Name </th>
+          <th style="padding-left: 12px;text-align: left;border: 1px solid black;"> Phone Number </th>
+          <th style="padding-left: 12px;text-align: left;border: 1px solid black;"> Email </th>
+          <th style="padding-left: 12px;text-align: left;border: 1px solid black;"> Undergraduate</th>
+        </tr>
+        <tr>
+            <td style="padding-left: 12px; text-align: left;border: 1px solid black;">Mohamed</td>
+            <td style="padding-left: 12px; text-align: left;border: 1px solid black;">Langi</td>
+            <td style="padding-left: 12px; text-align: left;border: 1px solid black;">314-494-6958</td>
+            <td style="padding-left: 12px; text-align: left;border: 1px solid black;">mlnp3@mail.umsl.edu</td>
+            <td style="padding-left: 12px; text-align: left;border: 1px solid black;" >Yes</td>
+        </tr>
+    </table>
+</section>
+<hr>
+<section>
+        <!-- table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+          }
+          th, td {
+            padding: 5px;
+            text-align: left;    
+          } -->
+    <h2>Rowspan: </h2>
+    <table>
+        <tr>
+                <th>Name:</th>
+                <td>Bill Gates</td>
+              </tr>
+              <tr>
+                <th rowspan="2">Telephone:</th>
+                <td>55577854</td>
+              </tr>
+              <tr>
+                <td>55577855</td>
+              </tr>
+            </table>
+</section>
+<hr>
+<section>
+    <h2>Colspan: </h2>
+        <table>
+                <tr>
+                  <th colspan="2">Monthly Savings</th>
+                </tr>
+                <tr>
+                  <td>January</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>$80</td>
+                </tr>
+              </table>
+</section>
+    
+</body>
+</html>
