@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Week 6-1: Forms</title>
+</head>
+
+<body>
+    <section>
+        <h2>Text Inputs: </h2>
+        <form>
+            First name: <input type="text" name="FirstName" value="Mohamed"><br>
+            Last name: <input type="text" name="LastName" value="Langi"><br>
+        </form>
+
+    </section>
+    <hr>
+
+    <section>
+        <h2>Password: </h2>
+        <form>
+            Enter Password:<br>
+            <input type="password" name="pw">
+        </form>
+    </section>
+    <hr>
+
+    <section>
+            <h2>Button: </h2>
+                <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+                <br>
+                <br>
+                <form action="./week-4.html">
+                    <label>First Name: </label>
+                    <input type="text" name="fname"><br>
+
+                    <input type="submit" value="Sumbit">
+                    <input type="reset" value="Clear">
+                </form>
+        </section>
+        <hr>
+
+    <section>
+        <h2>Tel: </h2>
+        <form>
+            Phone Number:<br>
+            <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name="phone">
+        </form>
+    </section>
+    <hr>
+    <section>
+        <h2>Checkbox: </h2>
+        <form>
+            Gender:
+            <input type="checkbox"> <label> Male </label>
+            <input type="checkbox"> <label>Female </label>
+        </form>
+    </section>
+    <hr>
+
+    <section>
+        <h2>Radio: </h2>
+        <form>
+            Gender:<br>
+            <input type="radio" name="gender" value="Male"> Male <br>
+            <input type="radio" name="gender" value="Female"> Female
+        </form>
+    </section>
+    <hr>
+
+
+</body>
+
+</html>
