@@ -1,5 +1,6 @@
 // Data types
-let studentNumber = 3; // number
+let x = 3
+let studentNumber = 33; // number
 let name = "Mohamed"; // string
 let hide = false; // boolean
 let grades = [80, 95, 76]; //Array
@@ -22,7 +23,8 @@ x = doubleTheValue(x)
 console.log("VALUE OF X after doubling it:::: " + x)
 
 function incrementByOne(a) {
-  console.log(a++);
+    a++
+  console.log(a);
 }
 
 function decrementByone(a) {
