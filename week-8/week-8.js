@@ -1,19 +1,39 @@
-alert("HELLO WORLD")
-console.log("Basic Log");
-console.error("ERROR LOG")
-console.warn("WARNING LOG")
+    // alert("Hello World ");
+    console.log("Basic Log")
+    console.error ("ERROR LOG")
+    console.warn("Warning Log")
+    // Declared x as a var.
+    let x = 3
+    let y = 5
+    let z 
 
-let x = 5;
-let y = 3;
-let z = x + y;
+    z = x + y 
+    console.log(z)
+    z= x -y
+    console.log(z)
+    console.log(x*y)
+    z = z*3
+    console.log(z)
 
-console.log(z)
-
-z = 20;
-console.log(z)
-
-z = "This is a text"
-console.log(z)
-
+    z = Math.pow(x,y)
+    console.log("z= x^y :::::: ", z)
 
 
+    z = x +y 
+
+    addTwoNum(x,y);
+    viewHTMLElements();
+
+    function addTwoNum(num1, num2 ){
+        let z = num1 + num2
+        console.log("ADD TWO NUM Function::::: ") 
+        console.log(z)
+
+    }
+
+    function viewHTMLElements(){
+        console.log(document.documentElement)
+    }
+
+
+    
