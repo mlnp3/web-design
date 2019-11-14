@@ -3,22 +3,7 @@ var myNodelist = document.getElementsByTagName("LI");
 var i;
 
 let todos = [];
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
 
-// Click on a close button to hide the current list item
-let close = document.getElementsByClassName("close");
-for (let i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  };
-}
 
 // Add a "checked" symbol when clicking on a list item
 let list = document.querySelector("ul");
@@ -49,21 +34,19 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-
-  for (let i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    };
+  addDeleteButton()
+  let tempObj = {
+    name: inputValue,
+    checked: false
   }
-  saveTolocalStorage(inputValue);
+  saveTolocalStorage(tempObj);
 }
 
 populateTodo = () => {
+  document.getElementById('todoUL').innerHTML =" ";
   for (todo of todos) {
-    
     var li = document.createElement("li");
-    var t = document.createTextNode(todo);
+    var t = document.createTextNode(todo.name);
     li.appendChild(t);
     document.getElementById("todoUL").appendChild(li);
 
@@ -72,19 +55,12 @@ populateTodo = () => {
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
-
-    console.log(li)
-
-    for (let i = 0; i < close.length; i++) {
-      close[i].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-      };
-    }
+    addDeleteButton()
   }
 };
 
 saveTolocalStorage = todo => {
+
   todos.push(todo);
   localStorage.setItem("todos", JSON.stringify(todos));
 };
@@ -95,3 +71,26 @@ window.onload = () => {
     populateTodo();
   }
 };
+
+
+addDeleteButton=()=>{
+  let close = document.getElementsByClassName("close");
+
+  for (let i = 0; i < close.length; i++) {
+    close[i].addEventListener("click",deleteTodo)
+  }
+
+}
+
+
+deleteTodo=(e)=>{
+  let x = e.srcElement.parentElement.innerText.split('\n');
+  let value = x[0];
+
+  todos = todos.filter(t=>{
+    return t.name != value
+  })
+  localStorage.setItem("todos", JSON.stringify(todos));
+  populateTodo();
+  
+}
